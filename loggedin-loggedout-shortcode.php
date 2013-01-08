@@ -60,7 +60,7 @@ class CTLT_Logged_in_Logged_Out {
 	function has_shortcode( $shortcode ) {
 		global $shortcode_tags;
 		
-		return ( in_array( $shortcode, $shortcode_tags ) ? true : false);
+		return ( in_array( $shortcode, array_keys ( $shortcode_tags ) ) ? true : false);
 	}
 	
 	/**
