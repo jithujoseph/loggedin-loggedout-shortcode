@@ -90,7 +90,7 @@ class CTLT_Logged_in_Logged_Out {
 		 if ( is_user_logged_in() && !is_null( $content ) && !is_feed() )
 			return do_shortcode($content);
 		
-		return '';
+		return "Please " . '<a href="'.wp_login_url( get_permalink($post->ID) ).'">Login</a> to view the content.';
 	}
 	
 	/**
